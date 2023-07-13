@@ -1,0 +1,277 @@
+body{background-color: black;margin: 0;width: 100vw; height: 100vh;overflow: hidden;overflow-y: auto;}
+*{font-family: sans-serif;color: #fff;font-family: 'IQOS', sans-serif;}
+#nav-bar
+{
+	border-right: 1px solid #2f3336;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	position: fixed;
+	
+	width: 64px;
+	height: 100vh;
+}
+#content
+{
+	position: absolute;
+	width: calc(100vw - 64px);
+	
+	left: 64px;
+}
+#icon
+{
+	width: 56px;
+	aspect-ratio: 1;
+	margin: 2.5px;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	
+	border-radius: 50%;
+}
+#icon:hover
+{
+	background-color: #333;
+}
+#icon.down
+{
+	margin-top: auto;
+}
+#icon img
+{
+	width: 50%;
+	height: 50%;
+	
+	filter: invert(0.8);
+}
+/* #content{display: grid; grid-template-columns: 1fr;grid-template-rows: 200px;} */
+#header
+{
+	position: relative;
+}
+#banner
+{
+	display: flex;
+	
+	height: 200px;
+	/* width: 100%; */
+	
+    justify-content: center;
+    align-items: center;
+	overflow: hidden;
+}
+#banner img
+{
+	width: 100%;
+	
+	object-fit: contain;
+	/* aspect-ratio: 3; */
+}
+#user-icon
+{
+	position: absolute;
+	width: 144px;
+	aspect-ratio: 1;
+	
+	display: flex;
+	justify-content: center;
+    align-items: center;
+	
+	background-color: black;
+	left: 50px;
+	bottom: -72px;
+	
+	overflow: hidden;
+	border-radius: 100%;
+}
+#user-icon img
+{
+	width: calc(144px - 12px);
+	border-radius: 100%;
+}
+#header #follow
+{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+	
+	height: 56px;
+	aspect-ratio: 3;
+	
+	text-align: center;
+	background-color: black;
+	border-radius: 28px;
+	
+	right: 50px;
+	bottom: -28px;
+}
+#follow-button
+{
+	position: absolute;
+	right: 120px;
+	bottom: -52px;
+	height: 42px;
+	aspect-ratio: 3;
+	
+	background-color: #fff;
+	border: none;
+	border-radius: 21px;
+	color: black;
+}
+
+#user-content
+{
+	margin-top: 72px;
+	margin-left: 36px;
+	margin-bottom: 48px;
+	min-height: 100px;
+	/* height: auto; */
+}
+h3
+{
+	margin: 0;
+}
+span.sub
+{
+	font-weight: 100;
+	color: #aaa;
+}
+#folow-info
+{
+	width: 50%;
+	display: grid;
+	align-items: right;
+	grid-template-columns: 1fr 1fr;
+}
+#menu, #menu ul{width: 100%;}
+#menu ul
+{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+#menu ul li
+{
+	display: flex;
+	justify-content: center;
+	position: relative;
+	height: 48px;
+}
+#menu ul li:hover
+{
+	background-color: #333;
+}
+#menu ul li.active::after
+{
+	content: '';
+	display: block;
+	width: 48px;
+	position: absolute;
+	height: 6px;
+	bottom: 0;
+	
+	background-color: #3434df;
+	border-radius: 3px;
+}
+#menu-content 
+{
+	border-top: 1px solid #2f3336;
+}
+
+#tweet
+{
+	position: relative;
+	
+	width: 100%;
+	min-height: 85px;
+	border-bottom: 1px solid #2f3336;
+}
+#tweet #author-icon
+{
+	position: absolute;
+	width: 46px;
+	height: 46px;
+	top: 12px;
+	left: 12px;
+}
+#tweet #author-icon img
+{
+	width: 100%;
+	height: 100%;
+	
+	border-radius: 100%;
+}
+#tweet #author-data
+{
+	position: absolute;
+	
+	left: 74px;
+	top: 0;
+}
+#tweet #author-data #author-tag::after
+{
+	content: '';
+	display: inline-block;
+	margin: 5px;
+	width: 2px;
+	height: 2px;
+	background-color: #aaa;
+	border-radius: 100%;
+}
+#tweet #tweet-content
+{
+	position: absolute;
+	top: 1.5rem;
+	left: 70px;
+}
+#tweet #action-buttons
+{
+	display: grid;
+	position: absolute;
+	
+	grid-template-columns: 1fr 1fr 1fr;
+	
+	bottom: 3px;
+	left: 70px;
+	
+	width: 50%;
+}
+#tweet #action-buttons div > span
+{
+	margin-left: 12px;
+	margin-bottom: 2px;
+	height: 25px;
+}
+#tweet #action-buttons div
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#tweet #action-buttons div #icon-button
+{
+	padding: 5px;
+	border-radius: 100%;
+}
+
+#tweet #action-buttons div #icon-button img
+{
+	width: 20px;
+	height: 20px;
+	filter: invert(1);
+}
+
+#tweet #action-buttons #share:hover #icon-button img{filter: invert(0.5) sepia(1) saturate(5) hue-rotate(100deg);}
+#tweet #action-buttons #share:hover #icon-button{background-color: rgba(0,186,124,0.1);}
+#tweet #action-buttons #like:hover #icon-button img{filter: invert(0.5) sepia(1) saturate(5) hue-rotate(340deg);}
+#tweet #action-buttons #like:hover #icon-button{background-color: rgba(249,24,128,0.1);}
+#tweet #action-buttons #comment:hover #icon-button img{filter: invert(0.5) sepia(1) saturate(5) hue-rotate(150deg);}
+#tweet #action-buttons #comment:hover #icon-button{background-color: rgba(128,24,249,0.1);}
